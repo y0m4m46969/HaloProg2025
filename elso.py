@@ -17,3 +17,15 @@ jatek_szam=0
 nem_talalDB=0
 
 kitalalando_szam=szamok[random.randint(len(szamok))]
+tipp=int(input("tipped?: "))
+while (tipp != kitalalando_szam):
+    tipp=int(input("tipped?: "))
+    
+print("eltaláltad")
+folytat=input("akarsz meg jatszani? [I/N]")
+
+if (folytat=="I"):
+    #????
+    
+else:
+    exit()
