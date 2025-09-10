@@ -10,3 +10,10 @@ for i in range (100):
 #ell
 print(len(szamok))
 print(szamok) 
+
+
+#EGYSZÁM JáTÉK
+jatek_szam=0
+nem_talalDB=0
+
+kitalalando_szam=szamok[random.randint(len(szamok))]
