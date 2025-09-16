@@ -2,10 +2,12 @@ import random
 
 szamok=[]
 
-#lista feltoltese 100db random 2jegyu egesz szammal
-for i in range (100):
+#lista feltoltese 40db random 2jegyu egesz szammal
+while len(szamok)!=40:
     szam=random.randint(10,99)
-    szamok.append(szam)
+    if szam not in szamok:
+        szamok.append(szam)
+    
     
 #ell
 print(szamok) 
@@ -25,6 +27,10 @@ while (jatszol):
         continue
     
     while (tipp!=kitalalando_szam):
+        if (tipp<kitalalando_szam):
+            print("kitalálandó szám nagyobb")
+        else:
+            print("kitalálandó szám kisebb")
         tipp_sz=input("tipped?: ").strip()
         if (tipp_sz.isdecimal()):
             tipp=int(tipp_sz)
