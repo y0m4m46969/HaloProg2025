@@ -2,21 +2,24 @@ import random
 
 szamok=[]
 
-#lista feltoltese 100db random 2jegyu egesz szammal
-for i in range (100):
+#lista feltoltese 40db random 2jegyu egesz szammal
+while len(szamok)!=40:
     szam=random.randint(10,99)
-    szamok.append(szam)
+    if szam not in szamok:
+        szamok.append(szam)
+    
     
 #ell
 print(szamok) 
 
-#EGYSZÁM JáTÉK
+#változok létrehozása statisztikához 
 jatek_szam=0
 nem_talalDB=0
 
 kitalalando_szam=szamok[random.randint(0, len(szamok))]
 jatszol=True
 while (jatszol):
+    jatek_szam+=1
     tipp_sz=input("tipped?: ").strip()
     if (tipp_sz.isdecimal()):
         tipp=int(tipp_sz)
@@ -25,9 +28,15 @@ while (jatszol):
         continue
     
     while (tipp!=kitalalando_szam):
-        tipp_sz=input("tipped?: ").strip()
+        if (tipp<kitalalando_szam):
+            print("kitalálandó szám nagyobb")
+        else:
+            print("kitalálandó szám kisebb")
+        tipp_sz=input("tipped? (egész szám)\n[Kilépés \'X\' karakterrel]: ").strip()
         if (tipp_sz.isdecimal()):
             tipp=int(tipp_sz)
+        elif (tipp== 'X'):
+            exit()
         else:
             print("egész számmal játsz")
             continue
