@@ -28,11 +28,14 @@ while (jatszol):
         continue
     
     while (tipp!=kitalalando_szam):
+        
         if (tipp<kitalalando_szam):
             print("kitalálandó szám nagyobb")
         else:
             print("kitalálandó szám kisebb")
-        tipp_sz=input("tipped? (egész szám)\n[Kilépés \'X\' karakterrel]: ").strip()
+            
+        tipp_sz=input("tipped? (egész szám)[Kilépés \'X\' karakterrel]: ").strip()
+        
         if (tipp_sz.isdecimal()):
             tipp=int(tipp_sz)
         elif (tipp== 'X'):
