@@ -57,5 +57,3 @@ while (jatszol):
         print(f"\n{jatek_szam} db szám kitalálásához {nem_talaltDB}-szer próbálkozott rosszul")
     elif (folytat=="I"):
         jatek_szam += 1
-        
-
